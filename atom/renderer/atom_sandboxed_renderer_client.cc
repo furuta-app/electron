@@ -158,6 +158,7 @@ void AtomSandboxedRendererClient::InitializeBindings(
   process.SetMethod("hang", AtomBindings::Hang);
   process.SetMethod("getHeapStatistics", &AtomBindings::GetHeapStatistics);
   process.SetMethod("getSystemMemoryInfo", &AtomBindings::GetSystemMemoryInfo);
+  process.SetMethod("getSystemMemoryInfo", &AtomBindings::GetProcessMemoryInfo);
   process.SetMethod(
       "getCPUUsage",
       base::Bind(&AtomBindings::GetCPUUsage, base::Unretained(metrics_.get())));
